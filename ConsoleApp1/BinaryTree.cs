@@ -57,7 +57,7 @@ namespace ConsoleApp1
                 current = n;
                 return current;
             }
-            else if (n.Num <= current.Num)
+            else if (n.Num < current.Num)
             {
                 current.left = RecursiveInsert(current.left, n);
                 current = Balance_Tree(current);
