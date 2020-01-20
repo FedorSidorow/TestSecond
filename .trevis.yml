@@ -1,6 +1,8 @@
+os: windows
 language: csharp
 solution: ConsoleApp1.sln
 mono: none
-dotnet: 2.1.4
+dotnet: 2.1.502
 script:
-  - dotnet test UnitTestProject1/UnitTestProject1.csproj
+  - dotnet restore
+  - dotnet test
