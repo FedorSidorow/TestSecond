@@ -1,7 +1,10 @@
 language: csharp
+dotnet: 3.1
 mono: none
-dotnet: 2.1.502
 solution: ConsoleApp1.sln
+install:
+  -nuget restore ConsoleApp1.sln
 script:
+  - msbuild /p:Configuration=Release ConsoleApp1.sln
   - dotnet restore
   - dotnet test
