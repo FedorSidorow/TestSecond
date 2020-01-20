@@ -2,7 +2,4 @@ os: windows
 language: csharp
 solution: ConsoleApp1.sln
 mono: none
-dotnet: 4.6.1
-script:
-  - dotnet restore
-  - dotnet test
+dotnet: 1.3.2
