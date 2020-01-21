@@ -10,7 +10,7 @@ namespace ConsoleApp1
     {
         public int[] value = new int[] { 0, 0, 0, 0, 0, 0, 0, 0 };
         int Lol = 0;
-
+        //111
         public class TreeNode
         {
             public int Num; // число 
