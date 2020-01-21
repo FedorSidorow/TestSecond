@@ -1,15 +1,13 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ConsoleApp1;
-using System.IO;
+using System.Linq;
+using Xunit;
 
-namespace UnitTestProject1
+namespace ConsoleApp1.Test
 {
-    [TestClass]
-    public class UnitTest1
+    public class ConsoleApp1Test
     {
-        [TestMethod]
-        public void MyFirstTestBlackBox_AddedisExist()
+        [Fact]
+        public void TestMethod1()
         {
             int expected = 2;
             BinaryTree bt = new BinaryTree();
@@ -17,10 +15,10 @@ namespace UnitTestProject1
 
             int actual = bt.root.Num;
 
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void BlackBoxWhatIlearnd()
         {
             BinaryTree bt = new BinaryTree();
@@ -40,10 +38,10 @@ namespace UnitTestProject1
             int[] expected = bt.value;
 
             for (int i = 0; i < bt.value.Length; i++)
-                Assert.AreEqual(expected[i], actual[i]);
+                Assert.Equal(expected[i], actual[i]);
         }
 
-        [TestMethod]
+        [Fact]
         public void Whitebox_TestingRotateRR()
         {
             BinaryTree bt = new BinaryTree();
@@ -63,10 +61,10 @@ namespace UnitTestProject1
             int[] expected = bt.value;
 
             for (int i = 0; i < bt.value.Length; i++)
-                Assert.AreEqual(expected[i], actual[i]);
+                Assert.Equal(expected[i], actual[i]);
         }
 
-        [TestMethod]
+        [Fact]
         public void Whitebox_TestingRotateLL()
         {
             BinaryTree bt = new BinaryTree();
@@ -86,10 +84,10 @@ namespace UnitTestProject1
             int[] expected = bt.value;
 
             for (int i = 0; i < bt.value.Length; i++)
-                Assert.AreEqual(expected[i], actual[i]);
+                Assert.Equal(expected[i], actual[i]);
         }
 
-        [TestMethod]
+        [Fact]
         public void Whitebox_TestingRotateLR()
         {
             BinaryTree bt = new BinaryTree();
@@ -109,10 +107,10 @@ namespace UnitTestProject1
             int[] expected = bt.value;
 
             for (int i = 0; i < bt.value.Length; i++)
-                Assert.AreEqual(expected[i], actual[i]);
+                Assert.Equal(expected[i], actual[i]);
         }
 
-        [TestMethod]
+        [Fact]
         public void Whitebox_TestingRotateRL()
         {
             BinaryTree bt = new BinaryTree();
@@ -132,7 +130,8 @@ namespace UnitTestProject1
             int[] expected = bt.value;
 
             for (int i = 0; i < bt.value.Length; i++)
-                Assert.AreEqual(expected[i], actual[i]);
+                Assert.Equal(expected[i], actual[i]);
         }
     }
+
 }
